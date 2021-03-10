@@ -9,7 +9,13 @@ $result = array();
 
 //Operator ?? only in PHP7
 $message = $_POST['message'] ?? null;
+$message = htmlentities($message, ENT_QUOTES, "UTF-8");
+$message = trim($message);
+
 $from = $_POST['from'] ?? null;
+$from = htmlentities($from, ENT_QUOTES, "UTF-8");
+$from = trim($from);
+
 $getHours = $_POST['getHours'] ?? null;
 $getMinutes = $_POST['getMinutes'] ?? null;
 
